@@ -1,13 +1,17 @@
 {
-  "name": "E-commerce Market Analysis Tool",
-  "budget_inr_per_month": 3000,
-  "description": "A market analysis tool for e-commerce to track highest-selling products each month.",
+  "name": "FoodDeliveryApp",
+  "budget_inr_per_month": 50000,
+  "description": "A food delivery app for 10,000 users per month.",
   "tech_stack": {
-    "front_end": "React",
-    "back_end": "Node.js",
-    "database": "MongoDB",
-    "proxy_server": "Nginx",
-    "hosting": "AWS"
+    "backend": "Node.js",
+    "database": "PostgreSQL",
+    "storage": "object storage",
+    "monitoring": "monitoring",
+    "analytics": "basic analytics"
   },
-  "non_functional_requirements": []
+  "non_functional_requirements": [
+    "scalability",
+    "cost efficiency",
+    "uptime monitoring"
+  ]
 }

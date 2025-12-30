@@ -48,7 +48,7 @@ Generate synthetic, cloud-agnostic billing data for this project:
 {json.dumps(project_profile, indent=2)}
 
 RULES:
-1. Generate exactly 15 billing records.
+1. Generate between 12 and 20 billing records.
 2. Total cost must sum up to roughly {project_profile['budget_inr_per_month']} INR.
 3. Use only cloud-agnostic names (e.g., 'Object Storage' instead of 'S3').
 4. Output ONLY a JSON array. 

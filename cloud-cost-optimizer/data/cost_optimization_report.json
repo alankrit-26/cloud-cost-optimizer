@@ -1,143 +1,140 @@
 {
-  "project_name": "E-commerce Market Analysis Tool",
+  "project_name": "FoodDeliveryApp",
   "analysis": {
-    "total_monthly_cost": 3075,
-    "budget": 3000,
-    "budget_variance": 75,
+    "total_monthly_cost": 6470,
+    "budget": 50000,
+    "budget_variance": -43530,
     "service_costs": {
-      "Compute": 2520.0,
-      "Database": 420.0,
-      "Object Storage": 100.0,
-      "Network": 35.0
+      "Compute": 2640.0,
+      "Database": 680.0,
+      "Object Storage": 1800.0,
+      "Monitoring": 900.0,
+      "Analytics": 450.0
     },
     "high_cost_services": {
-      "Compute": 2520.0
+      "Compute": 2640.0
     },
-    "is_over_budget": true
+    "is_over_budget": false
   },
   "recommendations": [
     {
-      "title": "Migrate to Free Tier for Development and Test Servers",
+      "title": "Migrate to AWS Free Tier for Compute",
       "service": "Compute",
-      "current_cost": 1080,
-      "potential_savings": 540,
+      "current_cost": 2640.0,
+      "potential_savings": 1320.0,
       "recommendation_type": "free_tier",
-      "description": "Migrate development and test servers to AWS Free Tier to reduce costs.",
+      "description": "Migrate to AWS Free Tier for Compute to reduce costs.",
       "implementation_effort": "low",
       "risk_level": "low",
       "steps": [
-        "Identify eligible resources",
-        "Migrate resources to Free Tier"
+        "Create an AWS account",
+        "Migrate Compute resources to AWS Free Tier"
       ],
       "cloud_providers": [
         "AWS"
       ]
     },
     {
-      "title": "Optimize Database Configuration",
+      "title": "Use DigitalOcean for Database",
       "service": "Database",
-      "current_cost": 420,
-      "potential_savings": 140,
-      "recommendation_type": "optimization",
-      "description": "Optimize database configuration to reduce costs.",
+      "current_cost": 680.0,
+      "potential_savings": 340.0,
+      "recommendation_type": "alternative_provider",
+      "description": "Use DigitalOcean for Database to reduce costs.",
       "implementation_effort": "medium",
       "risk_level": "medium",
       "steps": [
-        "Analyze database usage",
-        "Optimize database configuration"
-      ],
-      "cloud_providers": [
-        "AWS"
-      ]
-    },
-    {
-      "title": "Use DigitalOcean for Compute Resources",
-      "service": "Compute",
-      "current_cost": 2520,
-      "potential_savings": 2520,
-      "recommendation_type": "alternative_provider",
-      "description": "Migrate compute resources to DigitalOcean to reduce costs.",
-      "implementation_effort": "high",
-      "risk_level": "high",
-      "steps": [
-        "Identify eligible resources",
-        "Migrate resources to DigitalOcean"
+        "Create a DigitalOcean account",
+        "Migrate Database resources to DigitalOcean"
       ],
       "cloud_providers": [
         "DigitalOcean"
       ]
     },
     {
-      "title": "Use Azure for Database Resources",
-      "service": "Database",
-      "current_cost": 420,
-      "potential_savings": 420,
-      "recommendation_type": "alternative_provider",
-      "description": "Migrate database resources to Azure to reduce costs.",
+      "title": "Optimize Object Storage usage",
+      "service": "Object Storage",
+      "current_cost": 1800.0,
+      "potential_savings": 900.0,
+      "recommendation_type": "optimization",
+      "description": "Optimize Object Storage usage to reduce costs.",
       "implementation_effort": "high",
       "risk_level": "high",
       "steps": [
-        "Identify eligible resources",
-        "Migrate resources to Azure"
+        "Analyze Object Storage usage",
+        "Optimize Object Storage configuration"
+      ],
+      "cloud_providers": []
+    },
+    {
+      "title": "Use Azure for Monitoring",
+      "service": "Monitoring",
+      "current_cost": 900.0,
+      "potential_savings": 450.0,
+      "recommendation_type": "alternative_provider",
+      "description": "Use Azure for Monitoring to reduce costs.",
+      "implementation_effort": "medium",
+      "risk_level": "medium",
+      "steps": [
+        "Create an Azure account",
+        "Migrate Monitoring resources to Azure"
       ],
       "cloud_providers": [
         "Azure"
       ]
     },
     {
-      "title": "Use GCP for Object Storage",
-      "service": "Object Storage",
-      "current_cost": 100,
-      "potential_savings": 100,
+      "title": "Migrate to GCP for Analytics",
+      "service": "Analytics",
+      "current_cost": 450.0,
+      "potential_savings": 225.0,
       "recommendation_type": "alternative_provider",
-      "description": "Migrate object storage resources to GCP to reduce costs.",
-      "implementation_effort": "high",
-      "risk_level": "high",
+      "description": "Migrate to GCP for Analytics to reduce costs.",
+      "implementation_effort": "low",
+      "risk_level": "low",
       "steps": [
-        "Identify eligible resources",
-        "Migrate resources to GCP"
+        "Create a GCP account",
+        "Migrate Analytics resources to GCP"
       ],
       "cloud_providers": [
         "GCP"
       ]
     },
     {
-      "title": "Use Open-Source Database",
+      "title": "Use Open-Source alternatives for Database",
       "service": "Database",
-      "current_cost": 420,
-      "potential_savings": 420,
+      "current_cost": 680.0,
+      "potential_savings": 680.0,
       "recommendation_type": "open_source",
-      "description": "Replace database with an open-source alternative to reduce costs.",
+      "description": "Use Open-Source alternatives for Database to reduce costs.",
       "implementation_effort": "high",
       "risk_level": "high",
       "steps": [
-        "Identify eligible resources",
-        "Migrate resources to open-source database"
+        "Research Open-Source alternatives",
+        "Migrate Database resources to Open-Source alternatives"
       ],
       "cloud_providers": []
     },
     {
-      "title": "Right-Size Compute Resources",
+      "title": "Optimize Compute usage",
       "service": "Compute",
-      "current_cost": 2520,
-      "potential_savings": 2520,
-      "recommendation_type": "right_sizing",
-      "description": "Right-size compute resources to reduce costs.",
+      "current_cost": 2640.0,
+      "potential_savings": 1320.0,
+      "recommendation_type": "optimization",
+      "description": "Optimize Compute usage to reduce costs.",
       "implementation_effort": "high",
       "risk_level": "high",
       "steps": [
-        "Analyze resource usage",
-        "Right-size resources"
+        "Analyze Compute usage",
+        "Optimize Compute configuration"
       ],
-      "cloud_providers": [
-        "AWS"
-      ]
+      "cloud_providers": []
     }
   ],
   "summary": {
-    "total_potential_savings": 4070,
-    "savings_percentage": 132.33,
+    "total_potential_savings": 6720.0,
+    "savings_percentage": 104.0,
     "recommendations_count": 7,
-    "high_impact_recommendations": 4
+    "high_impact_recommendations": 3
   }
 }

@@ -13,101 +13,13 @@
   {
     "month": "2025-01",
     "service": "Database",
-    "resource_id": "db-01",
-    "region": "asia-south",
-    "usage_type": "on-demand",
-    "usage_quantity": 90,
-    "unit": "GB",
-    "cost_inr": 200,
-    "desc": "Database storage"
-  },
-  {
-    "month": "2025-01",
-    "service": "Object Storage",
-    "resource_id": "os-01",
-    "region": "asia-south",
-    "usage_type": "on-demand",
-    "usage_quantity": 10,
-    "unit": "TB",
-    "cost_inr": 50,
-    "desc": "Product images"
-  },
-  {
-    "month": "2025-01",
-    "service": "Network",
-    "resource_id": "nw-01",
-    "region": "asia-south",
-    "usage_type": "on-demand",
-    "usage_quantity": 100,
-    "unit": "GB",
-    "cost_inr": 20,
-    "desc": "Network traffic"
-  },
-  {
-    "month": "2025-01",
-    "service": "Compute",
-    "resource_id": "vm-02",
-    "region": "asia-south",
-    "usage_type": "on-demand",
-    "usage_quantity": 360,
-    "unit": "hours",
-    "cost_inr": 600,
-    "desc": "Development server"
-  },
-  {
-    "month": "2025-01",
-    "service": "Database",
     "resource_id": "db-02",
-    "region": "asia-south",
-    "usage_type": "on-demand",
-    "usage_quantity": 30,
-    "unit": "GB",
-    "cost_inr": 100,
-    "desc": "Development database"
-  },
-  {
-    "month": "2025-01",
-    "service": "Object Storage",
-    "resource_id": "os-02",
-    "region": "asia-south",
-    "usage_type": "on-demand",
-    "usage_quantity": 5,
-    "unit": "TB",
-    "cost_inr": 25,
-    "desc": "Development assets"
-  },
-  {
-    "month": "2025-01",
-    "service": "Network",
-    "resource_id": "nw-02",
-    "region": "asia-south",
-    "usage_type": "on-demand",
-    "usage_quantity": 50,
-    "unit": "GB",
-    "cost_inr": 10,
-    "desc": "Development traffic"
-  },
-  {
-    "month": "2025-01",
-    "service": "Compute",
-    "resource_id": "vm-03",
     "region": "asia-south",
     "usage_type": "on-demand",
     "usage_quantity": 240,
     "unit": "hours",
-    "cost_inr": 480,
-    "desc": "Test server"
-  },
-  {
-    "month": "2025-01",
-    "service": "Database",
-    "resource_id": "db-03",
-    "region": "asia-south",
-    "usage_type": "on-demand",
-    "usage_quantity": 20,
-    "unit": "GB",
-    "cost_inr": 80,
-    "desc": "Test database"
+    "cost_inr": 400,
+    "desc": "Database server"
   },
   {
     "month": "2025-01",
@@ -115,53 +27,196 @@
     "resource_id": "os-03",
     "region": "asia-south",
     "usage_type": "on-demand",
-    "usage_quantity": 3,
-    "unit": "TB",
-    "cost_inr": 15,
-    "desc": "Test assets"
+    "usage_quantity": 960,
+    "unit": "hours",
+    "cost_inr": 960,
+    "desc": "Object storage"
   },
   {
     "month": "2025-01",
-    "service": "Network",
-    "resource_id": "nw-03",
+    "service": "Monitoring",
+    "resource_id": "mon-04",
     "region": "asia-south",
     "usage_type": "on-demand",
-    "usage_quantity": 30,
-    "unit": "GB",
-    "cost_inr": 5,
-    "desc": "Test traffic"
+    "usage_quantity": 480,
+    "unit": "hours",
+    "cost_inr": 480,
+    "desc": "Monitoring service"
+  },
+  {
+    "month": "2025-01",
+    "service": "Analytics",
+    "resource_id": "ana-05",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 240,
+    "unit": "hours",
+    "cost_inr": 240,
+    "desc": "Basic analytics"
   },
   {
     "month": "2025-01",
     "service": "Compute",
-    "resource_id": "vm-04",
+    "resource_id": "vm-06",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 360,
+    "unit": "hours",
+    "cost_inr": 720,
+    "desc": "Load balancer"
+  },
+  {
+    "month": "2025-01",
+    "service": "Database",
+    "resource_id": "db-07",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 120,
+    "unit": "hours",
+    "cost_inr": 160,
+    "desc": "Database replica"
+  },
+  {
+    "month": "2025-01",
+    "service": "Object Storage",
+    "resource_id": "os-08",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 480,
+    "unit": "hours",
+    "cost_inr": 480,
+    "desc": "Backup storage"
+  },
+  {
+    "month": "2025-01",
+    "service": "Monitoring",
+    "resource_id": "mon-09",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 240,
+    "unit": "hours",
+    "cost_inr": 240,
+    "desc": "Monitoring agent"
+  },
+  {
+    "month": "2025-01",
+    "service": "Analytics",
+    "resource_id": "ana-10",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 120,
+    "unit": "hours",
+    "cost_inr": 120,
+    "desc": "Data processing"
+  },
+  {
+    "month": "2025-01",
+    "service": "Compute",
+    "resource_id": "vm-11",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 240,
+    "unit": "hours",
+    "cost_inr": 480,
+    "desc": "Worker nodes"
+  },
+  {
+    "month": "2025-01",
+    "service": "Database",
+    "resource_id": "db-12",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 60,
+    "unit": "hours",
+    "cost_inr": 80,
+    "desc": "Database maintenance"
+  },
+  {
+    "month": "2025-01",
+    "service": "Object Storage",
+    "resource_id": "os-13",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 240,
+    "unit": "hours",
+    "cost_inr": 240,
+    "desc": "Data archiving"
+  },
+  {
+    "month": "2025-01",
+    "service": "Monitoring",
+    "resource_id": "mon-14",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 120,
+    "unit": "hours",
+    "cost_inr": 120,
+    "desc": "Alerting service"
+  },
+  {
+    "month": "2025-01",
+    "service": "Analytics",
+    "resource_id": "ana-15",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 60,
+    "unit": "hours",
+    "cost_inr": 60,
+    "desc": "Data visualization"
+  },
+  {
+    "month": "2025-01",
+    "service": "Compute",
+    "resource_id": "vm-16",
     "region": "asia-south",
     "usage_type": "on-demand",
     "usage_quantity": 120,
     "unit": "hours",
     "cost_inr": 240,
-    "desc": "Backup server"
+    "desc": "Development environment"
   },
   {
     "month": "2025-01",
     "service": "Database",
-    "resource_id": "db-04",
+    "resource_id": "db-17",
     "region": "asia-south",
     "usage_type": "on-demand",
-    "usage_quantity": 10,
-    "unit": "GB",
+    "usage_quantity": 30,
+    "unit": "hours",
     "cost_inr": 40,
-    "desc": "Backup database"
+    "desc": "Database testing"
   },
   {
     "month": "2025-01",
     "service": "Object Storage",
-    "resource_id": "os-04",
+    "resource_id": "os-18",
     "region": "asia-south",
     "usage_type": "on-demand",
-    "usage_quantity": 2,
-    "unit": "TB",
-    "cost_inr": 10,
-    "desc": "Backup assets"
+    "usage_quantity": 120,
+    "unit": "hours",
+    "cost_inr": 120,
+    "desc": "Data backup"
+  },
+  {
+    "month": "2025-01",
+    "service": "Monitoring",
+    "resource_id": "mon-19",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 60,
+    "unit": "hours",
+    "cost_inr": 60,
+    "desc": "Monitoring dashboard"
+  },
+  {
+    "month": "2025-01",
+    "service": "Analytics",
+    "resource_id": "ana-20",
+    "region": "asia-south",
+    "usage_type": "on-demand",
+    "usage_quantity": 30,
+    "unit": "hours",
+    "cost_inr": 30,
+    "desc": "Data reporting"
   }
 ]
