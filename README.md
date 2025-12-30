@@ -55,9 +55,7 @@ How to Run:-
 
 python cli.py
 
-==============================
  Cloud Cost Optimizer CLI
-==============================
 1. Enter new project description
 2. Run complete cost analysis
 3. View recommendations
