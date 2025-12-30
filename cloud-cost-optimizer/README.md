@@ -24,34 +24,9 @@ Features
 
 5. Menu-Driven CLI Orchestrator
 
-6. Cloud-Agnostic & Multi-Cloud Recommendations
+6. Multi-Cloud Recommendations
 
-7. Open-Source & Free-Tier Suggestions
-
-Project Architecture
-
-cloud-cost-optimizer/
-│
-├── llm/
-│   └── extractor.py           # Project profile extraction using LLM
-│
-├── billing/
-│   └── generator.py           # Synthetic cloud billing generation
-│
-├── analysis/
-│   ├── cost_analyzer.py       # Deterministic cost calculations
-│   └── optimizer.py           # LLM-based optimization recommendations
-│
-├── data/
-│   ├── project_description.txt
-│   ├── project_profile.json
-│   ├── mock_billing.json
-│   └── cost_optimization_report.json
-│
-├── cli.py                     # Menu-driven CLI orchestrator
-├── .env                       # Hugging Face API token
-├── requirements.txt
-└── README.md
+7. Open-Source Suggestions
 
 
 Setup Instructions:
@@ -76,11 +51,10 @@ Create a .env file in the root directory:
 HF_API_TOKEN=your_huggingface_api_token_here
 
 
-How to Run
+How to Run:-
 
 python cli.py
 
-You will see the menu:
 ==============================
  Cloud Cost Optimizer CLI
 ==============================

@@ -4,11 +4,11 @@ import requests
 import re
 from dotenv import load_dotenv
 
-# Load environment variables
+
 load_dotenv()
 
 HF_API_TOKEN = os.getenv("HF_API_TOKEN")
-# Llama 3.1 is generally more stable for JSON than 3.0
+
 MODEL = "meta-llama/Llama-3.1-8B-Instruct"
 API_URL = "https://router.huggingface.co/v1/chat/completions"
 
@@ -23,14 +23,14 @@ def extract_json_array(text: str) -> list:
     a valid JSON list from potentially messy LLM output.
     """
     try:
-        # 1. Look for the largest block starting with [ and ending with ]
+
         match = re.search(r'\[.*\]', text, re.DOTALL)
         if not match:
             raise ValueError("No JSON array brackets ([ ]) found in output.")
         
         json_str = match.group(0)
 
-        # 2. Cleanup: Remove common LLM mistakes like trailing commas before closing bracket
+
         json_str = re.sub(r',\s*\]', ']', json_str)
         
         return json.loads(json_str)
@@ -73,7 +73,7 @@ Format for each record:
             {"role": "system", "content": "You are a data generator. Output ONLY a raw JSON array. No conversational text."},
             {"role": "user", "content": prompt}
         ],
-        "temperature": 0.2, # Lower temperature = more reliable JSON
+        "temperature": 0.2,
         "max_tokens": 2000
     }
 
@@ -83,7 +83,7 @@ Format for each record:
         
         output_text = response.json()["choices"][0]["message"]["content"]
         
-        # Extract and parse
+
         records = extract_json_array(output_text)
         
         if records is None:
@@ -96,26 +96,25 @@ Format for each record:
         raise e
 
 if __name__ == "__main__":
-    # Ensure data directory exists
+
     os.makedirs("data", exist_ok=True)
 
-    # 1. Load the profile generated in the previous step
+
     try:
         with open("data/project_profile.json", "r") as f:
             profile = json.load(f)
         
-        print(f"🚀 Generating billing for: {profile.get('name', 'Unknown Project')}...")
+        print(f" Generating billing for: {profile.get('name', 'Unknown Project')}...")
         
-        # 2. Run Generation
+
         billing_records = generate_mock_billing(profile)
         
-        # 3. Save Results
         with open("data/mock_billing.json", "w") as f:
             json.dump(billing_records, f, indent=2)
             
-        print(f"✅ Success! Generated {len(billing_records)} records in data/mock_billing.json")
+        print(f" Success! Generated {len(billing_records)} records in data/mock_billing.json")
 
     except FileNotFoundError:
-        print("❌ Error: data/project_profile.json not found. Run your extractor script first.")
+        print(" Error: data/project_profile.json not found. Run your extractor script first.")
     except Exception as e:
-        print(f"❌ Billing generation failed: {e}")
+        print(f" Billing generation failed: {e}")

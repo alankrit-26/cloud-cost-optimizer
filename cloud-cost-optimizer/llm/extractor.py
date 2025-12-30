@@ -15,7 +15,7 @@ HEADERS = {
     "Content-Type": "application/json"
 }
 
-# ------------------- Custom Errors -------------------
+
 
 class InvalidLLMResponse(Exception):
     pass
@@ -25,7 +25,6 @@ def validate_project_profile(data: dict):
     if not isinstance(data, dict):
         raise InvalidLLMResponse("LLM output is not a JSON object")
 
-    # Required high-level fields
     if "name" not in data or not isinstance(data["name"], str):
         raise InvalidLLMResponse("Field 'name' must be a string")
 
@@ -40,9 +39,9 @@ def validate_project_profile(data: dict):
     if "tech_stack" not in data or not isinstance(data["tech_stack"], dict):
         raise InvalidLLMResponse("Field 'tech_stack' must be an object")
 
-    # ---- non_functional_requirements (flexible) ----
+
     if "non_functional_requirements" not in data or data["non_functional_requirements"] is None:
-        # Normalize missing / null to empty list
+
         data["non_functional_requirements"] = []
 
     if not isinstance(data["non_functional_requirements"], list):
